@@ -1,14 +1,11 @@
 'use strict';
 
 function makeStudentsReport(data) {
-  // data array of objects, loop through
   let newArray = [];
   for ( let i=0; i<data.length; i++ ){
     newArray.push(`${data[i].name}: ${data[i].grade}`) ;
   }
   return newArray;
-  // each object student & letter grade
-  // return array of strings 'name: grade'
 }
 
 
