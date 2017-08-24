@@ -36,12 +36,12 @@ let firstQuery = findOne(HEROES, { squad: 'Avengers', name: 'Hulk' });
 //console.log(firstQuery);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~
-function findMatches(arr, query) {
+function findMatches(arr, query) { //problem defines that query is never empty
   let queryKeys = Object.keys(query); // (e.g. ['name', 'squad'])
   return arr.find(item => { // loop thru array of all heroes
     let arrKeys = Object.keys(item); //get the keys for this item (e.g. ['name', 'squad'])
     let keyMatch = arrKeys.filter(key => item[key] === query[key]);
-    if ((keyMatch.length === queryKeys.length) && keyMatch.length > 0) { return true; }
+    if (keyMatch.length === queryKeys.length) { return true; }
   }); // end for loop
 }
 
